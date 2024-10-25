@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <script defer src="script.js"></script>
+    <title>Papi Churro</title>
+</head>
+<body>
+    <h1>Papi Churro Caffe</h1>
+    <p class="cashier">Current cashier: Roee</p>
+    <form action="" class="login">
+        <input required type="text" placeholder="User Name" id="user-name">
+        <input required type="password" placeholder="Password" id="password">
+        <button class="login_btn">Login</button>
+    </form>
+    <div class="app">
+        
+        
+
+        <dialog data-modal class="popup popup_con" id="popup_con" >
+            <a data-close-modal="" href="#products" class="popup_close">X</a>
+            <p class=" popup popup_p">How would You like to pay?</p>
+                <button class="popup_method popup_method_0">Cash</button>
+                <button class="popup_method popup_method_1">Card</button>
+                <form class="form_mezoman" action="submit">
+                    <input step="0.01" class="mezoman" type="number" placeholder="אנא הכנס סכום לתשלום"> 
+                    <a class="pay" href="#products">PAY</a>
+                </form>
+        </dialog>
+
+        <div class="daily-trans">
+            <a href="#products" class="popup_close">X</a>
+             <table>
+                 <thead>
+                     <tr>
+                         <th>Date</th>
+                         <th>Id</th>
+                         <th>Cashier</th>
+                         <th>Amount</th>
+                     </tr>
+                 </thead>
+                 <tbody class="adddeal">
+                     
+                 </tbody>
+             </table>
+            </div>
+
+
+            <div class="modify">
+
+                <div class="modify-option drink">
+                    <span class="option-top">
+                    Size 
+                </span>
+                    <div class="option">
+                        <label for="small" >Small</label>
+                        <input type="radio" name="off" id="small" checked>
+                    </div>
+    
+                    <div class="option">
+                        <label for="medium">Medium + $0.70</label>
+                        <input type="radio" name="off" id="medium">
+                    </div>
+                    
+                    <div class="option">
+                        <label for="large">Large + $1.00</label>
+                        <input type="radio" name="off" id="large">
+                    </div>
+                </div>
+
+
+
+                <div class="modify-option cafe"> 
+                    <span class="option-top">
+                    Milk 
+                </span>
+
+                    <div class="option">
+                        <label for="soy">Soy Milk + $1.00</label>
+                        <input name="milktype" value="soy" id="soy" type="radio">
+                    </div>
+                    
+                    <div class="option">
+                        <label for="almond">Almond Milk + $0.90</label>
+                        <input name="milktype" value="almond" id="almond" type="radio">
+                    </div>
+                    
+                    <div class="option">
+                        <label for="coconut">Coconut Milk + $1.40</label>
+                        <input name="milktype" value="coconut" id="coconut" type="radio">
+                    </div>
+                    
+                    <div class="option">
+                        <label for="lactose">Lactose-Free Milk + $1.20</label>
+                        <input name="milktype" value="lactose" id="lactose" type="radio">
+                    </div>
+                    
+                    <div class="option">
+                        <label for="organic">Organic Milk + $1.10</label>
+                        <input name="milktype" value="organic" id="organic" type="radio">
+                    </div>
+                </div>
+
+                <div class="modify-option">
+                    <span class="option-top">
+                       Toppings
+                    </span>
+                    <div class="option">
+                        <label for="cream">Whipped Cream + $1.00</label>
+                        <input type="checkbox" name="drink-addon" id="cream">
+                    </div>
+
+                    <div class="option">
+                        <label for="vsyrup">Vanilla Syrup + $1.00</label>
+                        <input type="checkbox" name="drink-addon" id="vsyrup">
+                    </div>
+                    <div class="option">
+                        <label for="csyrup">Caramel Syrup + $1.00</label>
+                        <input type="checkbox" name="drink-addon" id="csyrup">
+                    </div>
+                    <div class="option">
+                        <label for="hsyrup">Hazelnut Syrup + $1.00</label>
+                        <input type="checkbox" name="drink-addon" id="hsyrup">
+                    </div>
+                    <div class="option">
+                        <label for="cocoa">Cocoa + $1.00</label>
+                        <input type="checkbox" name="drink-addon" id="cocoa">
+                    </div>
+                </div>
+
+
+                <div class="modify-option">
+                   
+                    <div class="option">
+                        <label for="gluten">Gluten-Free</label>
+                        <input type="checkbox" name="off" id="gluten">
+                    </div>
+
+                    <div class="option">
+                        <label for="sugar">Sugar-Free</label>
+                        <input type="checkbox" name="off" id="sugar">
+                    </div>
+                    
+                    <div class="option">
+                        <label for="dairy">Dairy-Free</label>
+                        <input type="checkbox" name="off" id="dairy">
+                    </div>
+                </div>
+
+                <button class="modify-btn">Done</button>
+
+
+            </div>
+
+
+
+
+        <div class="products" id="products">
+            
+            <div class="product">
+                <h3 class="item_name">Espresso</h3>
+                <label for="" class="item_price">$0.99</label>
+            </div>
+            
+            
+            
+            <div class="product">
+                <h3 class="item_name">Latte</h3>
+                <label for="" class="item_price">$1.99</label>
+            </div>
+            
+            
+            <div class="product">
+                <h3 class="item_name">Black coffee</h3>
+                <label for="" class="item_price">$0.99</label>
+            </div>
+            
+            
+            <div class="product">
+                <h3 class="item_name">Americano</h3>
+                <label for="" class="item_price">$1.49</label>
+            </div>
+            
+            
+            <div class="product">
+                <h3 class="item_name">Cold cofee</h3>
+                <label for="" class="item_price">$2.49</label>
+            </div>
+            
+            
+            <div class="product">
+                <h3 class="item_name">Tea</h3>
+                <label for="" class="item_price">$1.20</label>
+            </div>
+            
+            
+            <div class="product">
+                <h3 class="item_name">Choclate Milk</h3>
+                <label for="" class="item_price">$2.99</label>
+            </div>
+            
+            <div class="product">
+                <h3 class="item_name">Shake</h3>
+                <label for="" class="item_price">$5.99</label>
+            </div>
+            <div class="product">
+                <h3 class="item_name">Fizzy drink</h3>
+                <label for="" class="item_price">$2.10</label>
+            </div>
+            <div class="product">
+                <h3 class="item_name">Iced Coffee</h3>
+                <label for="" class="item_price">$4.99</label>
+            </div>
+            <div class="product">
+                <h3 class="item_name">Orange juice</h3>
+                <label for="" class="item_price">$4.59</label>
+            </div>
+            <div class="product">
+                <h3 class="item_name">Soda/Mineral Water</h3>
+                <label for="" class="item_price">$0.99</label>
+            </div>
+
+            <div class="product">
+                <h3 class="item_name">Borekas</h3>
+                <label for="" class="item_price">$2.99</label>
+            </div>
+            <div class="product">
+                <h3 class="item_name">Churros(3 pcs)</h3>
+                <label for="" class="item_price">$3.99</label>
+            </div>
+
+            <div class="product">
+                <h3 class="item_name">Classic brownie</h3>
+                <label for="" class="item_price">$5.00</label>
+            </div>
+            <div class="product">
+                <h3 class="item_name">Brownie with cream</h3>
+                <label for="" class="item_price">$6.99</label>
+            </div>
+            <div class="product">
+                <h3 class="item_name">​​Brownie with ice cream</h3>
+                <label for="" class="item_price">$7.99</label>
+            </div>
+            <div class="product">
+                <h3 class="item_name">Nutella croissant</h3>
+                <label for="" class="item_price">$4.99</label>
+            </div>
+
+            <div class="product">
+                <h3 class="item_name">Grilled croissant</h3>
+                <label for="" class="item_price">$3.50</label>
+            </div>
+            <div class="product">
+                <h3 class="item_name">Chocolate napolitana</h3>
+                <label for="" class="item_price">$2.70</label>
+            </div>
+            <div class="product">
+                <h3 class="item_name">Waffle with syrup</h3>
+                <label for="" class="item_price">$4.50</label>
+            </div>
+
+            <div class="product">
+                <h3 class="item_name">Crepe</h3>
+                <label for="" class="item_price">$4.99</label>
+            </div>
+            <div class="product">
+                <h3 class="item_name">Porras(3 pcs) </h3>
+                <label for="" class="item_price">$3.99</label>
+            </div>
+            <div class="product">
+                <h3 class="item_name">Churro</h3>
+                <label for="" class="item_price">$1.60</label>
+            </div>
+
+
+           
+
+
+        </div>
+    
+    
+        <div class="kopa">
+
+        <table class="table_kopa">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody class="add_kopa">
+                <tr>
+                    <td>Caffe latte</td>
+                    <td>$1.99</td>
+                    <td>
+                        <button class="btn_qt">-</button>
+                        <div class="qt">
+                            1
+                        </div>
+                    <button class="btn_qt">+</button>
+                    </td>
+                    <td>$1.99</td>
+                </tr>
+
+                <tr>
+                    <td>Caffe latte</td>
+                    <td>$1.99</td>
+                    <td>
+                        <button class="btn_qt">-</button>
+                    1
+                    <button class="btn_qt">+</button>
+                    </td>
+                    <td>$1.99</td>
+                </tr>
+
+                <tr>
+                    <td>Caffe latte</td>
+                    <td>$1.99</td>
+                    <td>
+                        <button class="btn_qt">-</button>
+                    1
+                    <button class="btn_qt">+</button>
+                    </td>
+                    <td>$1.99</td>
+                </tr>
+
+                <tr>
+                    <td>Caffe latte</td>
+                    <td>$1.99</td>
+                    <td>
+                        <button class="btn_qt">-</button>
+                    1
+                    <button class="btn_qt">+</button>
+                    </td>
+                    <td>$1.99</td>
+                </tr>
+
+
+                <tr>
+                    <td>Caffe latte</td>
+                    <td>$1.99</td>
+                    <td>
+                        <button class="btn_qt">-</button>
+                    1
+                    <button class="btn_qt">+</button>
+                    </td>
+                    <td>$1.99</td>
+                </tr>
+
+                <tr>
+                    <td>Caffe latte</td>
+                    <td>$1.99</td>
+                    <td>
+                        <button class="btn_qt">-</button>
+                    1
+                    <button class="btn_qt">+</button>
+                    </td>
+                    <td>$1.99</td>
+                </tr>
+
+
+                <tr>
+                    <td>Caffe latte</td>
+                    <td>$1.99</td>
+                    <td>
+                        <button class="btn_qt">-</button>
+                    1
+                    <button class="btn_qt">+</button>
+                    </td>
+                    <td>$1.99</td>
+                </tr>
+                <tr>
+                    <td>Caffe latte</td>
+                    <td>$1.99</td>
+                    <td>
+                    <button class="btn_qt">-</button>
+                    1
+                    <button class="btn_qt">+</button>
+                    </td>
+                    <td>$1.99</td>
+                </tr>
+                
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total to pay:</td>
+                    <td></td>
+                    <td></td>
+                    <td class="total_usd">0</td>
+                </tr>
+            </tfoot>
+        </table>
+        
+        <div class="addons">
+            <a class="btn_addon recipt" data-open-modal href="#popup_con">CHECKOUT</a>
+            <button class="btn_addon calcday">Daily Total</button>
+            <button class="btn_addon request">Order Modifications</button>
+            <button class="btn_addon shift logout_btn">END SHIFT</button>
+        </div>
+
+        </div>
+
+
+
+
+</body>
+</html>

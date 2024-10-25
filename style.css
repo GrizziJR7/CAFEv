@@ -1,0 +1,279 @@
+/* COLORS
+
+BACK COLOR = #F5F5F5
+TEXT COLOR= #152B45
+
+FONT - 
+
+
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto";
+  background-color: #f9f9f9;
+  color: #333333;
+}
+h1 {
+  text-align: center;
+  align-content: center;
+  padding: 10px;
+}
+.app {
+  margin-top: 50px;
+  padding: 0 50px;
+  display: flex;
+  height: 80vh;
+  max-width: 900px;
+  justify-content: space-between;
+  visibility: hidden;
+}
+
+.login {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.login input {
+  font-size: 1.4rem;
+}
+
+.login_btn {
+  width: 70px;
+  font-size: 1.4rem;
+}
+
+.cashier {
+  text-align: center;
+  visibility: hidden;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  height: fit-content;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  background-color: #4caf50;
+  border-radius: 10%;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  justify-content: center;
+}
+
+.kopa {
+  margin-left: 40px;
+}
+
+.daily-trans {
+  position: absolute;
+  top: 10%;
+  height: 80%;
+  width: 90%;
+  font-size: 1.5rem;
+  color: white;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.5); /* רקע כהה למחצה */
+}
+
+.modify {
+  text-align: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 5fr 1fr;
+  display: grid;
+  position: absolute;
+  top: 10%;
+  height: 80%;
+  width: 90%;
+  font-size: 1.8rem;
+  color: beige;
+  background-color: rgba(0, 0, 0, 1);
+  visibility: hidden;
+}
+
+.modify-option {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.modify-btn {
+  font-size: 1.2rem;
+  height: 50px;
+  width: 100px;
+  grid-column: span 4;
+  align-self: center;
+  justify-self: center;
+}
+
+.daily-trans table {
+  width: 100%;
+}
+
+.table_kopa {
+  border: 1px solid #152b45;
+  height: 80%;
+  width: 600px;
+  text-align: center;
+}
+
+th,
+td {
+  border: 1px solid black;
+}
+
+.quantity {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.btn_qt {
+  margin: 0px 10px;
+  background-color: white;
+  border: none;
+  font-size: 1.3rem;
+  height: fit-content;
+  align-self: center;
+}
+
+.addons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.btn_addon {
+  text-align: center;
+  text-decoration: none;
+  height: 35px;
+  background-color: #4caf50;
+  color: #000000;
+  font-size: 1rem;
+}
+
+.btn_addon:hover,
+.btn_addon:active,
+.product:active {
+  background-color: #357a38;
+}
+
+.recipt,
+.shift {
+  padding-top: 7px;
+  grid-column: span 2;
+}
+
+.display_qt {
+  display: flex;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.popup_con {
+  display: grid;
+  position: absolute;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  top: 10%;
+  z-index: 1000; /* מעל כל התוכן האחר */
+  width: 90%;
+  height: 85%;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.8); /* רקע כהה למחצה */
+  visibility: hidden;
+  opacity: 0;
+
+  &:target {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.popup_close {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: beige;
+  text-decoration: none;
+
+  &:target {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.popup_method {
+  height: 50%;
+  width: 50%;
+  align-self: center;
+  justify-self: center;
+}
+
+.methodActive {
+  background-color: #357a38;
+}
+
+.popup_p {
+  align-self: center;
+  text-align: center;
+  grid-column: span 2;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.mezoman {
+  margin: auto;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  border-radius: 10%;
+}
+
+.form_mezoman {
+  display: flex;
+  grid-column: span 2;
+  align-items: center;
+  justify-self: center;
+  width: 400px;
+  gap: 0;
+  margin: 50px;
+  visibility: hidden;
+}
+
+.form_mezoman button {
+  height: 50px;
+  width: 100px;
+  border-radius: 10%;
+}
+
+.pay {
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: #4caf50;
+  border-radius: 10%;
+  text-align: center;
+  text-decoration: none;
+}
+.qt {
+  align-self: center;
+}
